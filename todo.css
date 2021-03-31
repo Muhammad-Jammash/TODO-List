@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #707070;    
+}
+
+main{
+    text-align: center;
+    border: 1px solid #950740;
+    padding: 10px;
+    margin: 10px;
+    background-color: #6f2232;
+    height: 100px;
+    box-shadow: 1px 1px 15px #000;
+}
+
+h1{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main div input.inputText{
+    background: transparent;
+    color: #1a1a10;
+    width: 30%;
+    height: 20px;
+    border-radius: 8px;
+    border: 2px solid #1a1a10;
+    color: antiquewhite;
+    font-size: 15px;
+}
+
+
+main div input::placeholder{
+    color: #1a1a10;
+    font-weight: 700;
+    padding-left: 3px;
+}
+
+
+div input.addBtn{
+    background: #1a1a10;
+    color: #950740;
+    border: 1px solid #1a1a10;
+    border-radius: 3px;
+    margin: 34px 10px 10px 10px;
+    height: 20px;
+    font-weight: 700;
+    width: 60px; 
+}
+
+main div .addBtn:hover{
+    background-color: #000;
+    transition: 0.3s ease;
+    border: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    border: 0.5px solid #1a1a10;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+    margin-top: 2px;
+}
+li:first-child{
+    margin-top: 40px;
+}
+li:hover{
+    background-color: gray;
+    transition: 00.2s;
+}
+
+button{
+    color: black;
+    position: absolute;
+    font-size: 16px;
+    background: transparent;
+    right: 0;
+    top: 0;
+    margin: 16px 12px;
+    border: none;
+}
+button:hover{
+    border-radius: 10px;
+    background-color: #1a1a10;
+    color: #3a383c;
+}
+
+
+
