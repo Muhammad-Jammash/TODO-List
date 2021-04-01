@@ -5,19 +5,16 @@ var list = [];
 // close.innerHTML = 'x';
 
 function makeList(){
-    let template = list.map(item => `<li>${item}<button>x</button></li>`).join('\n');
+    let template = list.map(item => `<li>${item}<button>X</button></li>`).join('\n');
     document.querySelector('ul').innerHTML = template;
-    // document.body.appendChild(close);
-    // item.appendChild(close);
-    // close.onClick=function(){
-    //     this.parentElement.style.display = 'none';
-    // }
-    // document.addEventListener('click', function(){
-    //     this.parentElement.style.display = 'none';
+    // document.querySelector('button').addEventListener('click',function(){
+    //     this.closest('li').remove();
     // });
+    document.querySelector('button').onclick = function(){
+        this.parentElement.remove();
+    }
+    
 }
-
-
 
 function addToList(){
 
@@ -28,7 +25,6 @@ function addToList(){
         list.push(todo.value);
         todo.value = '';
         makeList();
-       
     }
 }
 

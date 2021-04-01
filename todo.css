@@ -8,7 +8,7 @@ main{
     text-align: center;
     border: 1px solid #950740;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 10px 30px 10px;
     background-color: #6f2232;
     height: 100px;
     box-shadow: 1px 1px 15px #000;
@@ -69,7 +69,8 @@ li{
     border-radius: 5px;
     width: 100%;
     padding: 5px;
-    margin-top: 2px;
+    margin-top: 3px; 
+    position: relative;
 }
 li:first-child{
     margin-top: 40px;
@@ -81,18 +82,23 @@ li:hover{
 
 button{
     color: black;
-    position: absolute;
-    font-size: 16px;
+    font-size: 14px;
     background: transparent;
-    right: 0;
-    top: 0;
-    margin: 16px 12px;
+    text-align: right;
+    margin: 7px 12px;
     border: none;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
+
 button:hover{
-    border-radius: 10px;
-    background-color: #1a1a10;
-    color: #3a383c;
+    border-radius: 6px;
+    background-color: #000;
+    color: #707070;
+    transition: 0.2s ease;
+    border: 1px solid #3a383c;
 }
 
 
