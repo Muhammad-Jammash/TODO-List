@@ -1,31 +1,37 @@
-var add = document.getElementById('add');
-var todo = document.getElementById('todo');
-var list = [];
-// var close = document.createElement('button');
-// close.innerHTML = 'x';
+let add = document.getElementById('add');
+let todo = document.getElementById('todo');
+let list = [];
 
-function makeList(){
-    let template = list.map(item => `<li>${item}<button>X</button></li>`).join('\n');
-    document.querySelector('ul').innerHTML = template;
-    // document.querySelector('button').addEventListener('click',function(){
-    //     this.closest('li').remove();
-    // });
-    document.querySelector('button').onclick = function(){
-        this.parentElement.remove();
-    }
+
+function makeList() {
+    let template = list.map(item => `<li><span>${item}</span><button onclick="removeItem(this);">X</button><h5 id="time"></h5></li>`).join('\n');
+    document.querySelector('ul').innerHTML = template; 
     
 }
 
-function addToList(){
+function removeItem(removeBtn) {
+    let itemTxt = removeBtn.previousSibling.innerHTML;
+    list.map((item, index) => {
+        if (item == itemTxt) {
+            list.splice(index, 1);
+        }
+    });
+    makeList();
+    
+}
 
-    if( !todo.value ){
-    alert('Please Enter Something')
+add.addEventListener('click', function(event){
+
+    if (!todo.value) {
+        alert('Please Enter Something');
     }
-    else{
+    else {
+        let today = new Date();
+        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         list.push(todo.value);
         todo.value = '';
         makeList();
+        document.getElementById('time').innerHTML = time;
+        event.preventDefault();
     }
-}
-
-
+});
