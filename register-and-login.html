@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/
+font-awesome.min.css">
+</head>
+<body>
+    <div class="heading">
+        <h1 class="heading1">Welcome to My TODO List</h1>
+    </div>
+    <div class="main-box" id="main-box-1">
+    <div class="for-reg" id="for-reg">
+        <input class="reg-btn" type="button" value="Register" name="" id="reg-btn" onclick="showRegisterForm();">
+    </div>
+    <div class="reg-box" id="reg-box">
+        <form>
+            <input class="text-field" type="text" placeholder="Name" id="reg-name"><br>
+            <input class="text-field" type="email" placeholder="Email" id="reg-email"><br>
+            <input class="text-field" type="password" placeholder="password" id="reg-pswd"><br>
+            <input class="text-field" type="password" placeholder="confirm password" id="reg-conf-pswd"><br>
+            <input class="signup" type="submit" value="Sign-up" id="signup">
+        </form>
+        <p class="reg-bottom-text">If you already have an account, then click on Login Button.</p>
+    </div>
+    </div>
+
+    <div class="main-box-2" id="main-box-2">
+        <div class="for-login">
+            <input class="login-btn" type="button" value="Login" id="login-btn" onclick="showLoginForm();">
+        </div>
+        <div class="login-box" id="login-box">
+            <form>
+                <input class="text-field-login" type="email" placeholder="Enter you Email"  id="login-email"><br>
+                <input class="text-field-login" type="password" placeholder="Enter your Password"  id="login-pswd"><br>
+                <input class="login" id="login" type="submit" value="Login">
+            </form>
+            <p class="login-bottom-text">If you do not have an account, then click on Register Button.</p>
+        </div>
+        </div>
+
+    <script type="text/javascript" src="js/todo.js"></script>
+    <script type="text/javascript" src="js/register-and-login.js"></script>
+</body>
+</html>
